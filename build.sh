@@ -187,6 +187,6 @@ make_ext4_recovery_image \
 	67108864 \
 	${RESULT_DIR}
 
-gen_boot_usb_script_4418 s5p4418 ${ADDRESS} ${RESULT_DIR}
+gen_boot_usb_script_4418 slsiap ${ADDRESS} ${RESULT_DIR}
 
 make_build_info ${RESULT_DIR}

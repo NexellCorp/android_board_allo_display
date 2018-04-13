@@ -400,12 +400,12 @@ function build_kernel()
 
 	pushd `pwd`
 	cd ${src}
-#	make ARCH=${arch} distclean
-#	make ARCH=${arch} ${config}
+	make ARCH=${arch} distclean
+	make ARCH=${arch} ${config}
 	echo "cross compile = ${cross_compile}"
 	make ARCH=${arch} CROSS_COMPILE=${cross_compile} ${image_type} -j8
 	make ARCH=${arch} CROSS_COMPILE=${cross_compile} dtbs
-#	make ARCH=${arch} CROSS_COMPILE=${cross_compile} modules -j8
+	make ARCH=${arch} CROSS_COMPILE=${cross_compile} modules -j8
 	popd
 
 	print_build_done
