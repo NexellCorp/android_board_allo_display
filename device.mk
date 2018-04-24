@@ -140,10 +140,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	allo_display_and \
 	libnxvoice \
-	test-pvo \
+	test-svoice \
 	libresample \
 	libpvo \
-	libpovosource
+	libpovosource \
+	libmwsr
 
 # libion needed by gralloc, ogl
 PRODUCT_PACKAGES += libion iontest
@@ -230,11 +231,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio HAL nx-allo_display property
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.nv.use_nxvoice=1 \
-	persist.nv.voice_vendor=pvo \
 	persist.nv.use_feedback=0 \
-	persist.nv.pdm_devnum=2 \
-	persist.nv.ref_devnum=1 \
-	persist.nv.feedback_devnum=3 \
+	persist.nv.pdm_devnum=4 \
+	persist.nv.ref_devnum=2 \
+	persist.nv.feedback_devnum=-1 \
 	persist.nv.pdm_chnum=4 \
 	persist.nv.pdm_gain=0 \
 	persist.nv.resample_out_chnum=1 \
